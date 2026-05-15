@@ -1,3 +1,4 @@
+
 package ASimulatorSystem;
 
 import java.awt.*;
@@ -14,8 +15,6 @@ public class Signup2 extends JFrame implements ActionListener{
     JComboBox c1,c2,c3,c4,c5;
     String formno;
     Signup2(String formno){
-        this.formno = formno;
-        setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 2");
         
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
@@ -25,6 +24,8 @@ public class Signup2 extends JFrame implements ActionListener{
         add(l14);
         
         
+        this.formno = formno;
+        setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 2");
         
         l1 = new JLabel("Page 2: Additonal Details");
         l1.setFont(new Font("Raleway", Font.BOLD, 22));
@@ -65,20 +66,16 @@ public class Signup2 extends JFrame implements ActionListener{
         l13 = new JLabel(formno);
         l13.setFont(new Font("Raleway", Font.BOLD, 13));
         
-        
-        
         b = new JButton("Next");
         b.setFont(new Font("Raleway", Font.BOLD, 14));
         b.setBackground(Color.BLACK);
         b.setForeground(Color.WHITE);
-        
         
         t1 = new JTextField();
         t1.setFont(new Font("Raleway", Font.BOLD, 14));
         
         t2 = new JTextField();
         t2.setFont(new Font("Raleway", Font.BOLD, 14));
-        
         
         r1 = new JRadioButton("Yes");
         r1.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -198,7 +195,7 @@ public class Signup2 extends JFrame implements ActionListener{
         r4.setBounds(460,540,100,30);
         add(r4);
         
-        b.setBounds(570,600,100,30);
+        b.setBounds(570,640,100,30);
         add(b);
         
         b.addActionListener(this);
@@ -247,6 +244,8 @@ public class Signup2 extends JFrame implements ActionListener{
                 setVisible(false);
             }
                 
+      
+            
         }catch(Exception ex){
              ex.printStackTrace();
         }

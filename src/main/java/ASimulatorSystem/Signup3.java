@@ -1,3 +1,4 @@
+
 package ASimulatorSystem;
 
 import java.awt.*;
@@ -16,15 +17,13 @@ public class Signup3 extends JFrame implements ActionListener{
     Signup3(String formno){
         this.formno = formno;
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 3");
-        
+    
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l14 = new JLabel(i3);
         l14.setBounds(150, 0, 100, 100);
         add(l14);
-        
-        
         
         l1 = new JLabel("Page 3: Account Details");
         l1.setFont(new Font("Raleway", Font.BOLD, 22));
@@ -52,16 +51,15 @@ public class Signup3 extends JFrame implements ActionListener{
     
         l9 = new JLabel("(4-digit password)");
         l9.setFont(new Font("Raleway", Font.BOLD, 12));
-        
+    
         l10 = new JLabel("Services Required:");
         l10.setFont(new Font("Raleway", Font.BOLD, 18));
         
         l11 = new JLabel("Form No:");
-        l11.setFont(new Font("Raleway", Font.BOLD, 13));
+        l11.setFont(new Font("Raleway", Font.BOLD, 14));
         
         l12 = new JLabel(formno);
-        l12.setFont(new Font("Raleway", Font.BOLD, 13));
-        
+        l12.setFont(new Font("Raleway", Font.BOLD, 14));
         
         b1 = new JButton("Submit");
         b1.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -101,7 +99,7 @@ public class Signup3 extends JFrame implements ActionListener{
         c7 = new JCheckBox("I hereby declares that the above entered details correct to th best of my knowledge.",true);
         c7.setBackground(Color.WHITE);
         c7.setFont(new Font("Raleway", Font.BOLD, 12));
-        
+         
         
         r1 = new JRadioButton("Saving Account");
         r1.setFont(new Font("Raleway", Font.BOLD, 16));
@@ -127,14 +125,14 @@ public class Signup3 extends JFrame implements ActionListener{
         
         setLayout(null);
         
-        l11.setBounds(680,10,70,30);
+        l11.setBounds(700,10,70,30);
         add(l11);
         
         l12.setBounds(770,10,40,30);
         add(l12);
         
         l1.setBounds(280,40,400,40);
-        add(l1);
+        add(l1); 
         
         l2.setBounds(100,140,200,30);
         add(l2);
@@ -160,7 +158,7 @@ public class Signup3 extends JFrame implements ActionListener{
         l5.setBounds(100,330,200,20);
         add(l5);
         
-        l6.setBounds(330,326,500,20);
+        l6.setBounds(330,330,500,20);
         add(l6);
         
         l7.setBounds(100,370,200,30);
@@ -196,20 +194,22 @@ public class Signup3 extends JFrame implements ActionListener{
         c7.setBounds(100,680,600,20);
         add(c7);
         
-        b1.setBounds(300,720,100,30);
+        b1.setBounds(250,720,100,30);
         add(b1);
         
         b2.setBounds(420,720,100,30);
         add(b2);
         
-        b1.addActionListener(this);
-        b2.addActionListener(this);
         
         getContentPane().setBackground(Color.WHITE);
         
         setSize(850,850);
-        setLocation(350,0);
+        setLocation(500,120);
         setVisible(true);
+        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        
     }
     
     public void actionPerformed(ActionEvent ae){
@@ -280,9 +280,10 @@ public class Signup3 extends JFrame implements ActionListener{
         
     }
     
-    
     public static void main(String[] args){
         new Signup3("").setVisible(true);
     }
     
 }
+
+

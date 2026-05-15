@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
-import java.util.*;
 import com.toedter.calendar.JDateChooser;
+import java.util.*;
 
 public class Signup extends JFrame implements ActionListener{
     
@@ -22,8 +22,8 @@ public class Signup extends JFrame implements ActionListener{
     
     Signup(){
         
-        setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 1");
-    
+        setTitle("NEW ACCOUNT APPLICATION FORM");
+        
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -67,6 +67,15 @@ public class Signup extends JFrame implements ActionListener{
         l12 = new JLabel("State:");
         l12.setFont(new Font("Raleway", Font.BOLD, 20));
         
+        l13 = new JLabel("Date");
+        l13.setFont(new Font("Raleway", Font.BOLD, 14));
+        
+        l14 = new JLabel("Month");
+        l14.setFont(new Font("Raleway", Font.BOLD, 14));
+        
+        l15 = new JLabel("Year");
+        l15.setFont(new Font("Raleway", Font.BOLD, 14));
+        
         
         t1 = new JTextField();
         t1.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -89,7 +98,7 @@ public class Signup extends JFrame implements ActionListener{
         t7 = new JTextField();
         t7.setFont(new Font("Raleway", Font.BOLD, 14));
         
-        
+       
         
         b = new JButton("Next");
         b.setFont(new Font("Raleway", Font.BOLD, 14));
@@ -128,8 +137,8 @@ public class Signup extends JFrame implements ActionListener{
         dateChooser = new JDateChooser();
 	//dateChooser.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 	dateChooser.setForeground(new Color(105, 105, 105));
-        dateChooser.setBounds(137, 337, 200, 29);
-        add(dateChooser);
+	dateChooser.setBounds(137, 337, 200, 29);
+	add(dateChooser);
         
         setLayout(null);
         l1.setBounds(140,20,600,40);
@@ -215,7 +224,7 @@ public class Signup extends JFrame implements ActionListener{
         
         getContentPane().setBackground(Color.WHITE);
         
-        setSize(850,750);
+        setSize(850,800);
         setLocation(500,120);
         setVisible(true);
     }
@@ -258,10 +267,10 @@ public class Signup extends JFrame implements ActionListener{
                 String q1 = "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+marital+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
                 c1.s.executeUpdate(q1);
                 
-                new Signup2(formno).setVisible(true);
+                new Signup2(first).setVisible(true);
                 setVisible(false);
             }
-                
+            
         }catch(Exception e){
              e.printStackTrace();
         }

@@ -23,7 +23,6 @@ public class Transactions extends JFrame implements ActionListener{
         l1.setForeground(Color.WHITE);
         l1.setFont(new Font("System", Font.BOLD, 16));
         
-        
        
         b1 = new JButton("DEPOSIT");
         b2 = new JButton("CASH WITHDRAWL");
@@ -77,7 +76,6 @@ public class Transactions extends JFrame implements ActionListener{
         
         
     }
-    
     
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()==b1){ 
